@@ -3,7 +3,7 @@ This is my personal website, consisting of a portfolio of projects.
 
 URL 1: https://dghorai-flaskapp.herokuapp.com/
 
-URL 2: https://dghorai83.github.io/
+URL 2: https://dghorai.github.io/
 
 **Steps Followed to Deploy Python Flask App on Heroku:**
 * Step-1: [Login Heroku](https://www.heroku.com/)
