@@ -26,3 +26,18 @@ URL 2: https://dghorai.github.io/
   * Type 'git push heroku master'
   * Type 'heroku open' (it will open web application)
 * Done!
+
+**Steps Followed to Publish Static Website on GitHub:**
+* Step-1: Create a new GitHub repository
+* Step-2: Clone the repository on your computer
+* Step-3: Create a static website (single or multi-page)
+* Step-4: Push your code to GitHub
+* Step-5: Open your repository settings
+* Step-6: Click on Pages
+* Step-7: Select source - 'Deploy from a branch' from drop-down
+* Step-8: Select branch - 'main' from drop-down
+  * Save this settings
+  * It will take some times to publish site
+  * It will create a link of your site
+* Done!
+
