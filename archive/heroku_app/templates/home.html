@@ -1,0 +1,286 @@
+<!-- comment any line/text with this symbol in html language -->
+<!-- CSS style functions call in html through 'class' method if CSS function starts with '.'-->
+<!-- transparent color: https://developer.mozilla.org/en-US/docs/Web/CSS/background-color -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DGhorai | Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.left-side {
+  width: 30%;
+}
+
+.column.right-side {
+  width: 30%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 40%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.left-side, .column.right-side, .column.middle {
+    width: 100%;
+  }
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the profile picture with center of a block/page */
+.avatar-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 50%;
+}
+
+/* Style the icon image with center of a block/page */
+.icon-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.icon-center2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+  width: 100%;
+}
+
+/* Border around text */
+.border-text {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Poppins", serif;
+  white-space: nowrap;
+  box-sizing: border-box;
+  line-height: 16px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 20px;
+  color: #8490ff;
+  background: #8490ff;
+}
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block-on-image {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #11ffee00;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.background-image {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 250px;
+}
+
+p.align-single-text {
+  text-align: center;
+}
+
+/* button */
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 5px 7px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+/* overlay on image */
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btn2 {
+  background-color: rgba(117, 190, 218, 0.5); 
+  border: none; 
+  border-radius: 5px; 
+  color: #333; 
+  padding: 5px 7px;
+  font-size: 16px;
+}
+
+/* change text color */
+mark.blue {
+    color:#0000A0;
+    background: none;
+}
+</style>
+</head>
+<body>
+
+<!-- this is the first row/block of the page -->
+<!-- --------------------------------------- -->
+<div class="container">
+  <img src="/static/backgroundimg.jpg" alt="Background Picture" class="background-image">
+  <div class="overlay">
+    <button class="btn2"><a href="/" style="text-decoration:none;">Home</a></button>
+  </div>
+  <div class="text-block-on-image">
+    <h1><p class="align-single-text">My Portfolio</p></h1>
+    <p class="align-single-text">Data Science | Remote Sensing | Backend Development</p>
+    <!-- <p>Lead Technical Engineer and Data Scientist @ DER | Ph.D. in Remote Sensing & GIS | AI/ML Researcher</p> -->
+  </div>
+</div>
+
+
+<!-- this is the second row/block of the page -->
+<!-- ---------------------------------------- -->
+<div class="topnav">
+  <a href="/about/">ABOUT</a>
+  <a href="/projects/">PROJECTS</a>
+  <a href="/research/">RESEARCH</a>
+  <a href="/static/myresume.pdf" class="border-text" target="_blank">RESUME</a>
+  <a href="http://hdl.handle.net/10603/292388" class="border-text" target="_blank">THESIS</a>
+</div>
+
+<!-- this is the third row/block of the page -->
+<!-- --------------------------------------- -->
+<div class="row">
+  <!-- this is the third row and first column of the page -->
+  <div class="column left-side">
+    <!-- adding blank text -->
+    <p>&nbsp</p>
+    <!-- adding profile picture -->
+    <a href="/about/"><img src="/static/profilepic.png" alt="Avatar Picture" class="avatar-center"></a>
+    <p>&nbsp</p>
+    <!-- <p>&nbsp</p> -->
+    <!-- adding external urls with icon -->
+    <div class="icon-center2">
+      <a href="https://orcid.org/0000-0001-5370-8203">
+        <img src="/static/orcid.png" alt="HTML Tutorial" style="width:25px;height:25px;" hspace="5">
+      </a>
+      <a href="https://www.researchgate.net/profile/Debabrata-Ghorai">
+        <img src="/static/researchgate.png" alt="HTML Tutorial" style="width:25px;height:25px;" hspace="5">
+      </a>
+      <a href="https://in.linkedin.com/in/debabrata-ghorai-ph-d-89a1a675?trk=public_profile_samename-profile">
+        <img src="/static/linkedin.png" alt="HTML Tutorial" style="width:25px;height:25px;" hspace="5">
+      </a>
+      <a href="https://github.com/dghorai83">
+        <img src="/static/github.png" alt="HTML Tutorial" style="width:25px;height:25px;" hspace="5">
+      </a>
+    </div>
+  </div>
+
+  <!-- this is the third row and second column of the page -->
+  <div class="column middle">
+    <p><b>I am</b></p>
+    <p>&nbsp</p>
+    <h1 style="color:rgb(16, 15, 17);font-size:40px;">Debabrata Ghorai</h1>
+    <p>&nbsp</p>
+    <p><mark class="blue">Lead technical engineer</mark> and a <mark class="blue">data scientist</mark> with hands-on experience in satellite image processing, <mark class="blue">machine learning</mark> model development, <mark class="blue">backend development</mark>, and <mark class="blue">geospatial</mark> data analysis.</p>
+    <p>Proficient in <mark class="blue">predictive modeling</mark>, data engineering, and data mining <mark class="blue">algorithms</mark>, as well as coding languages: Python and R.</p>
+    <p>Experienced in implementing action-oriented solutions to complex business problems on <mark class="blue">crop analytics</mark>, <mark class="blue">flood hazard mapping</mark>, <mark class="blue">coastal vulnerability analysis</mark>, and <mark class="blue">land use/land cover mapping</mark>.</p>
+  </div>
+
+  <!-- this is the third row and third column of the page -->
+  <div class="column right-side">
+    <p>&nbsp</p>
+    <h3 style="color:rgb(10, 81, 122);">Technical Stack</h3>
+    <p>&#10004; Python, R, PostgreSQL<br>&#10004; Pandas, Geopandas, Scikit-learn, OpenCV, Keras, Tensorflow, GDAL, Flask<br>&#10004; AWS Lambda, S3 Bucket, EC2 Instance<br>&#10004; Spyder, PyCharm, VSCode, Git, DBeaver, QGIS, ArcGIS, ERDAS Imagine</p>
+    <h3 style="color:rgb(10, 81, 122);">Data Science Skills</h3>
+    <p>&#10004; Supervised/Unsupervised Machine Learning, Predictive Modeling<br>&#10004; Statistics, Exploratory Data Analysis, Data Cleaning, Data Visualization, Model Deployment<br>&#10004; Neural Networks, Deep Learning (DL), Natural Language Processing (NLP)</p>
+  </div>
+</div>
+
+<!-- this is the fourth row/block of the page -->
+<!-- ---------------------------------------- -->
+<div class="footer">
+    <p>Copyright @ 2022 My Portfolio Website</p>
+</div>  
+</body>
+</html>

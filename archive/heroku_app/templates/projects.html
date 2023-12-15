@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DGhorai | Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.left-side2 {
+  width: 20%;
+}
+
+.column.right-side2 {
+  width: 20%;
+}
+
+/* Middle column */
+.column.middle2 {
+  width: 60%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.left-side2, .column.right-side2, .column.middle2 {
+    width: 100%;
+  }
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the profile picture with center of a block/page */
+.avatar-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 50%;
+}
+
+/* Style the icon image with center of a block/page */
+.icon-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Border around text */
+.border-text {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Poppins", serif;
+  white-space: nowrap;
+  box-sizing: border-box;
+  line-height: 16px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 20px;
+  color: #8490ff;
+  background: #8490ff;
+}
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+}
+
+/* transparent color: https://developer.mozilla.org/en-US/docs/Web/CSS/background-color */
+/* Bottom right text */
+.text-block-on-image {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #11ffee00; 
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.background-image {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 250px;
+}
+
+p.align-single-text {
+  text-align: center;
+}
+
+/* grid layout */
+.grid-layout {
+  white-space: pre-wrap;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+/* button */
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 5px 7px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+/* overlay on image */
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btn2 {
+  background-color: rgba(117, 190, 218, 0.5); 
+  border: none; 
+  border-radius: 5px; 
+  color: #333; 
+  padding: 5px 7px;
+  font-size: 16px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: auto;
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.project-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  border-radius: 100%;
+}
+
+
+.link a {
+    color: rgb(56, 54, 214);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link a:hover {
+  color: rgb(66, 129, 71);
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<!-- this is the first row/block of the page -->
+<!-- --------------------------------------- -->
+<div class="container">
+  <img src="/static/backgroundimg.jpg" alt="Background Picture" class="background-image">
+  <div class="overlay">
+    <button class="btn2"><a href="/" style="text-decoration:none;">Home</a></button>
+  </div>
+  <div class="text-block-on-image">
+    <h1><p class="align-single-text">My Portfolio</p></h1>
+    <p class="align-single-text">Data Science | Remote Sensing | Backend Development</p>
+    <!-- <p>Lead Technical Engineer and Data Scientist @ DER | Ph.D. in Remote Sensing & GIS | AI/ML Researcher</p> -->
+  </div>
+</div>
+
+
+<!-- this is the second row/block of the page -->
+<!-- ---------------------------------------- -->
+<div class="topnav">
+  <a href="/about/">ABOUT</a>
+  <a href="/projects/">PROJECTS</a>
+  <a href="/research/">RESEARCH</a>
+  <a href="/static/myresume.pdf" class="border-text" target="_blank">RESUME</a>
+  <a href="http://hdl.handle.net/10603/292388" class="border-text" target="_blank">THESIS</a>
+</div>
+
+<!-- this is the third row/block of the page -->
+<!-- --------------------------------------- -->
+<div class="row">
+  <div class="column left-side2"></div>
+  <!-- https://www.w3schools.com/howto/howto_css_two_columns.asp -->
+  <!-- project-1 -->
+  <div class="column middle2">
+    <div class="row2">
+      <div class="column2" style="background-color:rgb(255, 255, 255);">
+        <a href="https://github.com/dghorai83/dghorai-portfolio-projects">
+          <img src="/static/img1.jpg" alt="HTML Picture" class="project-center">
+        </a>
+      </div>
+      <div class="column2" style="background-color:rgb(255, 255, 255);">
+        <div class="link">
+          <a href="https://github.com/dghorai83/dghorai-portfolio-projects">
+            <h2>Building Portfolio Website using Python and Flask with Heruko deployment</h2>
+          </a>
+        </div>
+        <p style="font-size:18px;">This is my personal website consisting of portfolio projects and this website hosted on Heroku cloud platform.</p>
+      </div>
+    </div>
+
+    <!-- project-2 -->
+    <div class="row2">
+      <div class="column2" style="background-color:rgb(255, 255, 255);">
+        <a href="https://github.com/dghorai83/offline-handwrritten-text-recognition">
+          <img src="/static/img2.jpg" alt="HTML Picture" class="project-center">
+        </a>
+      </div>
+      <div class="column2" style="background-color:rgb(255, 255, 255);">
+        <div class="link">
+          <a href="https://github.com/dghorai83/offline-handwrritten-text-recognition">
+            <h2>Handwritten Text Recognition using Tensorflow, Keras, and IAM Dataset</h2>
+          </a>
+        </div>
+        <p style="font-size:18px;">Handwritten text contained in scanned images converted into digital text using Deep Learning. The handwritten text recognition model architecture consisting of CNN, RNN, and CTC Loss function. CNN is used to extract features from the handwritten text image. RNN is used to predict sequential output per time step. CTC Loss function is used to predict output for each time-step.</p>
+      </div>
+    </div>
+
+    <!-- project-3 -->
+    <div class="row2">
+      <div class="column2" style="background-color:rgb(255, 255, 255);">
+        <a href="https://github.com/dghorai83/flower-recognization">
+          <img src="/static/img3.jpg" alt="HTML Picture" class="project-center">
+        </a>
+      </div>
+      <div class="column2" style="background-color:rgb(255, 255, 255);">
+        <div class="link">
+          <a href="https://github.com/dghorai83/flower-recognization">
+            <h2>Flower Recognization using Deep Learning</h2>
+          </a>
+        </div>
+        <p style="font-size:18px;">I have trained a Convolutional Neural Network (CNN) to predict the 5 types of flowers using the flower recognization dataset collected from 
+          <a href="https://www.tensorflow.org/datasets/catalog/tf_flowers">here</a>. 
+          The flower images were first preprocessed and resize into a fixed image size to train the machine learning model.
+        </p>
+      </div>
+    </div>
+
+    <!-- project-4 -->
+    <div class="row2">
+      <div class="column2" style="background-color:rgb(255, 255, 255);">
+        <a href="https://github.com/dghorai83/geotiff-mosaic">
+          <img src="/static/img4.jpg" alt="HTML Picture" class="project-center">
+        </a>
+      </div>
+      <div class="column2" style="background-color:rgb(255, 255, 255);">
+        <div class="link">
+          <a href="https://github.com/dghorai83/geotiff-mosaic">
+            <h2>Mosaic Large GeoTiff Files Faster</h2>
+          </a>
+        </div>
+        <p style="font-size:18px;">Mosaic large GeoTiff files/Satellite scenes using GDAL and Python extension package with less time.</p>
+      </div>
+    </div>
+
+    <!-- project-5 -->
+    <div class="row2">
+      <div class="column2" style="background-color:rgb(255, 255, 255);">
+        <a href="https://github.com/dghorai83/rsgis-scripts">
+          <img src="/static/img5.jpg" alt="HTML Picture" class="project-center">
+        </a>
+      </div>
+      <div class="column2" style="background-color:rgb(255, 255, 255);">
+        <div class="link">
+          <a href="https://github.com/dghorai83/rsgis-scripts">
+            <h2>Scripts for Remote Sensing and GIS Data Analysis and Workflow Automation</h2>
+          </a>
+        </div>
+        <p style="font-size:18px;">This repositary contained several scripts written in Python language for Remote Sensing and GIS data analysis and workflow automation. I have writen this scripts during my Ph.D. work and several other geospatial reserach work.</p>
+      </div>
+    </div>
+
+    <!-- project-6 -->
+    <div class="row2">
+      <div class="column2" style="background-color:rgb(255, 255, 255);">
+        <a href="https://github.com/dghorai83/detect-mobile-screen-on-or-off">
+          <img src="/static/img6.jpg" alt="HTML Picture" class="project-center">
+        </a>
+      </div>
+      <div class="column2" style="background-color:rgb(255, 255, 255);">
+        <div class="link">
+          <a href="https://github.com/dghorai83/detect-mobile-screen-on-or-off">
+            <h2>Detect Mobile Screen Switched-off/Switched-on</h2>
+          </a>
+        </div>
+        <p style="font-size:18px;">Mobile pictures collected from internet and youtube videos and then data augmentation techniques used to increase the training sample for mobile phone's screen on/off detection machine learning model development.</p>
+      </div>
+    </div>
+  </div>
+  <div class="column left-side2"></div>
+</div>
+
+<!-- this is the fourth row/block of the page -->
+<!-- ---------------------------------------- -->
+<div class="footer">
+    <p>Copyright @ 2022 My Portfolio Website</p>
+</div>  
+</body>
+</html>

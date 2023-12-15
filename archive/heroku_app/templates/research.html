@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DGhorai | Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.left-side2 {
+  width: 10%;
+}
+
+.column.right-side2 {
+  width: 10%;
+}
+
+/* Middle column */
+.column.middle2 {
+  width: 80%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.left-side2, .column.right-side2, .column.middle2 {
+    width: 100%;
+  }
+}
+
+/* transparent: https://developer.mozilla.org/en-US/docs/Web/CSS/background-color */
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the profile picture with center of a block/page */
+.avatar-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 50%;
+}
+
+/* Style the icon image with center of a block/page */
+.icon-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Border around text */
+.border-text {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Poppins", serif;
+  white-space: nowrap;
+  box-sizing: border-box;
+  line-height: 16px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 20px;
+  color: #8490ff;
+  background: #8490ff;
+}
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block-on-image {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #11ffee00; 
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.background-image {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 250px;
+}
+
+p.align-single-text {
+  text-align: center;
+}
+
+/* Display multiline text */
+.multiline {
+  white-space: pre-wrap;
+}
+
+.article {
+  width: 300px;
+  border: 2px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+/* button */
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 5px 7px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+/* overlay on image */
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btn2 {
+  background-color: rgba(117, 190, 218, 0.5); 
+  border: none; 
+  border-radius: 5px; 
+  color: #333; 
+  padding: 5px 7px;
+  font-size: 16px;
+}
+
+.link a {
+    color: rgb(56, 54, 214);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link a:hover {
+  color: rgb(66, 129, 71);
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<!-- this is the first row/block of the page -->
+<!-- --------------------------------------- -->
+<div class="container">
+  <img src="/static/backgroundimg.jpg" alt="Background Picture" class="background-image">
+  <div class="overlay">
+    <button class="btn2"><a href="/" style="text-decoration:none;">Home</a></button>
+  </div>
+  <div class="text-block-on-image">
+    <h1><p class="align-single-text">My Portfolio</p></h1>
+    <p class="align-single-text">Data Science | Remote Sensing | Backend Development</p>
+    <!-- <p>Lead Technical Engineer and Data Scientist @ DER | Ph.D. in Remote Sensing & GIS | AI/ML Researcher</p> -->
+  </div>
+</div>
+
+
+<!-- this is the second row/block of the page -->
+<!-- ---------------------------------------- -->
+<div class="topnav">
+  <a href="/about/">ABOUT</a>
+  <a href="/projects/">PROJECTS</a>
+  <a href="/research/">RESEARCH</a>
+  <a href="/static/myresume.pdf" class="border-text" target="_blank">RESUME</a>
+  <a href="http://hdl.handle.net/10603/292388" class="border-text" target="_blank">THESIS</a>
+</div>
+
+<!-- this is the third row/block of the page -->
+<!-- --------------------------------------- -->
+<div class="row">
+  <div class="column left-side2"></div>
+  <div class="column middle2">
+    <h2>List of Publication</h2>
+    <div class="link">
+      <ul>
+        <li>
+          <a href="https://link.springer.com/chapter/10.1007/978-3-030-79634-1_18">
+            Ghorai, D., Bhunia, G. S., & Shit, P. K. (2022). Automatic Strahler’s Stream Order Computing on Digital Stream Network Dataset. In Drainage Basin Dynamics (pp. 407-415). Springer, Cham.
+          </a>
+        </li><br> <!-- adding a blank line between two points/line-->
+        <li>
+          <a href="https://link.springer.com/chapter/10.1007/978-3-030-79634-1_13">
+            Ghorai, D., Bhunia, G. S., Devulapalli, S., & Shit, P. K. (2022). Morphometric Analysis for Prioritizing Sub-watershed and Management Using Geospatial Technique. In Drainage Basin Dynamics (pp. 285-303). Springer, Cham.
+          </a>
+        </li><br>
+        <li>
+          <a href="https://www.researchgate.net/profile/Pravat-Shit/publication/350031635_Coastal_Aquifer_Vulnerability_for_Saltwater_Intrusion_A_Case_Study_of_Chennai_Coast_Using_GALDIT_Model_and_Geoinformatics/links/60d5eecf299bf1ea9ebe2f0a/Coastal-Aquifer-Vulnerability-for-Saltwater-Intrusion-A-Case-Study-of-Chennai-Coast-Using-GALDIT-Model-and-Geoinformatics.pdf">
+            Ghorai, D., Bhunia, G. S., & Shit, P. K. (2021). Coastal Aquifer Vulnerability for Saltwater Intrusion: A Case Study of Chennai Coast Using GALDIT Model and Geoinformatics. In Groundwater and Society (pp. 349-362). Springer, Cham.
+          </a>
+        </li><br>
+        <li>
+          <a href="https://www.tandfonline.com/doi/abs/10.1080/10106049.2020.1815868">
+            Ghorai, D., & Bhunia, G. S. (2020). Automatic shoreline detection and its forecast: a case study on Dr. Abdul Kalam Island in the section of Bay of Bengal. Geocarto International, 1-20.
+          </a>
+        </li><br>
+        <li>
+          <a href="https://link.springer.com/article/10.1007/s41976-019-00030-w">
+            Ghorai, D., & Mahapatra, M. (2020). Extracting shoreline from satellite imagery for GIS analysis. Remote Sensing in Earth Systems Sciences, 3(1), 13-22.
+          </a>
+        </li><br>
+        <li>
+          <a href="https://link.springer.com/article/10.1007/s41976-020-00031-0">
+            Ghorai, D., & Mahapatra, M. (2020). Correction to: Extracting Shoreline from Satellite Imagery for GIS Analysis. Remote Sensing in Earth Systems Sciences, 3(1), 23-23.
+          </a>
+        </li><br>
+        <li>
+          <a href="https://www.researchgate.net/profile/Debabrata-Ghorai/publication/338659722_Extraction_of_Flood_Defense_Structures_from_High-Resolution_Digital_Surface_Model_DSM/links/5e23e72392851cafc38fdbc4/Extraction-of-Flood-Defense-Structures-from-High-Resolution-Digital-Surface-Model-DSM.pdf">
+            Priya, H., Ghorai, D. (2019). Extraction of Flood Defense Structures from High-Resolution Digital Surface Model (DSM). Esri India User Conference 2019.
+          </a>
+        </li><br>
+        <li>
+          <a href="https://www.researchgate.net/profile/Debabrata-Ghorai/publication/322157107_Cyclone_Vulnerability_Assessment_of_Tamil_Nadu_Coast_India_Using_Remote_Sensing_and_GIS_Techniques/links/61bab7d463bbd932429761c9/Cyclone-Vulnerability-Assessment-of-Tamil-Nadu-Coast-India-Using-Remote-Sensing-and-GIS-Techniques.pdf">
+            Ghorai, D., Devulapalli, S., & Paul, A. K. (2017). Cyclone vulnerability assessment of Tamil Nadu Coast, India using remote sensing and GIS techniques. Journal of Remote Sensing Technology, 5(1), 32-43.
+          </a>
+        </li><br>
+        <li>
+          <a href="http://stmjournals.com/index.php?journal=JoRSG&page=article&op=view&path%5B%5D=8659">
+            Ghorai, D., Roy, S., & Paul, A. K. (2017). Land Use/Land Cover Assessment of Tamil Nadu Coast, India using Remote Sensing and GIS Techniques. Journal of Remote Sensing & GIS, 8(2): 25–37p.
+          </a>
+        </li><br>
+        <li>
+          <a href="https://www.researchgate.net/profile/Debabrata-Ghorai/publication/338659413_Application_of_Remote_Sensing_and_GIS_Techniques_for_Decadal_Change_Detection_of_Mangroves_along_Tamil_Nadu_Coast_India/links/61bab4111d88475981f1be99/Application-of-Remote-Sensing-and-GIS-Techniques-for-Decadal-Change-Detection-of-Mangroves-along-Tamil-Nadu-Coast-India.pdf">
+            Ghorai, D., Mahapatra, M., & Paul, A. K. (2016). Application of remote sensing and GIS techniques for decadal change detection of mangroves along Tamil Nadu Coast, India. Journal of Remote Sensing & GIS, 7(1), 42-53.
+          </a>
+        </li><br>
+        <li>
+          <a href="https://www.researchgate.net/profile/Somnath-Maiti/publication/275015827_Landslide_Susceptibility_Mapping_A_Case_Study_of_Cauvery_Basin_and_East_Flowing_Rivers_South_of_Cauvery_Basin_India/links/55362d9f0cf268fd00161cfd/Landslide-Susceptibility-Mapping-A-Case-Study-of-Cauvery-Basin-and-East-Flowing-Rivers-South-of-Cauvery-Basin-India.pdf">
+            Ghorai, D., Maiti, S., & Paul, A. K. (2015). Landslide susceptibility mapping: a case study of cauvery basin and east flowing rivers south of cauvery basin, India. environment, 1, 2.
+          </a>
+        </li><br>
+        <li>
+          <a href="https://www.researchgate.net/profile/Rajat-Satpathy/publication/274315245_Monitoring_of_Land_Use_Land_Cover_Change_over_the_Years_Due_to_River_Course_Shifting_A_Case_Study_on_Ganga_River_Basin_near_Malda_District_West_Bengal_Using_Geo-informatices_Techniques/links/551b90f00cf251c35b509d68/Monitoring-of-Land-Use-Land-Cover-Change-over-the-Years-Due-to-River-Course-Shifting-A-Case-Study-on-Ganga-River-Basin-near-Malda-District-West-Bengal-Using-Geo-informatices-Techniques.pdf">
+            Maiti, S., Ghorai, D., Satpathy, R., & Bandyopadhyay, J. (2014). Monitoring of Land Use Land Cover Change over the Years Due to River Course Shifting: A Case Study on Ganga River Basin near Malda District, West Bengal Using Geo-informatices Techniques. International Journal of Research in Advent Technology, 2(10), 83-90.
+          </a>
+        </li><br>
+        <li>
+          <a href="https://www.researchgate.net/profile/Gouri-Bhunia/publication/338659460_Demographic_Pressure_in_Transforming_of_Land_UseLand_Cover_over_four_Decades_in_Nadia_District_of_West_Bengal_Province_India_Using_Multi-temporal_Landsat_Data/links/5e80aeaa458515efa0b69c64/Demographic-Pressure-in-Transforming-of-Land-Use-Land-Cover-over-four-Decades-in-Nadia-District-of-West-Bengal-Province-India-Using-Multi-temporal-Landsat-Data.pdf">
+            Jana, A., Ghorai, D., Bhunia, G. S., & Pal, D. K. (2011). Demographic Pressure in Transforming of Land Use/Land Cover over four Decades in Nadia District of West Bengal Province, India, Using Multi-temporal Landsat Data. Niugini Agrisaiens 3, 59–74.
+          </a>
+        </li><br>
+        <!-- <li>
+          <a href="">
+            next...
+          </a>
+        </li><br> -->
+      </ul>
+    </div>
+  </div>
+  <div class="column left-side2"></div>
+</div>
+
+<!-- this is the fourth row/block of the page -->
+<!-- ---------------------------------------- -->
+<div class="footer">
+    <p>Copyright @ 2022 My Portfolio Website</p>
+</div>  
+</body>
+</html>
