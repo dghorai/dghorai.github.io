@@ -5,7 +5,7 @@ URL 1: https://dghorai-flaskapp.herokuapp.com/
 
 URL 2: https://dghorai.github.io/
 
-**Steps Followed to Deploy Python Flask App on Heroku:**
+**`Steps Followed to Deploy Python Flask App on Heroku:`**
 * Step-1: [Login Heroku](https://www.heroku.com/)
 * Step-2: Select 'Create new app'
 * Step-3: Download [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and installed
@@ -27,7 +27,7 @@ URL 2: https://dghorai.github.io/
   * Type 'heroku open' (it will open web application)
 * Done!
 
-**Steps Followed to Publish Static Website on GitHub:**
+**`Steps Followed to Publish Static Website on GitHub:`**
 * Step-1: Create a new GitHub repository
 * Step-2: Clone the repository on your computer
 * Step-3: Create a static website (single or multi-page)
