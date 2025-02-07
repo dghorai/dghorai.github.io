@@ -116,11 +116,19 @@
             font-weight: 600;
         }
         .navbar .logo a span{
-            color: rgb(176, 177, 197);
+            color: rgb(144, 238, 144);
             font-weight: 700;
             transition: all 0.3s ease;
         }
         .navbar.sticky .logo a span{
+            color: #fff;
+        }
+        .navbar .logo a p{
+            color: rgb(144, 238, 144);
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        .navbar.sticky .logo a p{
             color: #fff;
         }
         .navbar .menu li{
@@ -225,12 +233,27 @@
         .about .about-content .left{
             width: 40%;
         }
+        /* manage left-side panel */
+        .about .about-content .style-elm{
+            border: 1px dashed #d0b6e9; 
+            padding: 20px; 
+            text-align: center; 
+            max-width: 100%; 
+            height: 100%; 
+            margin: 0 auto; 
+            background: #d0b6e9; 
+            border-radius: 6px;
+        }
+        .about .about-content .style-elm:hover{
+            background: rgb(154, 95, 202);
+        }
+        /* manage left-side profile image shape */
         .about .about-content .left img{
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 80%;
-            border-radius: 6px;
+            width: 40%;
+            border-radius: 50px;
         }
         .about .about-content .right{
             width: 60%;
@@ -243,8 +266,10 @@
         .about .about-content .right .text span{
             color: rgb(224, 46, 46);
         }
+        /* manage right-side text-area box shape */
         .about .about-content .right p{
             text-align: justify;
+            padding: 5px 50px;
         }
         .about .about-content .right a{
             display: inline-block;
@@ -302,10 +327,24 @@
         .services .service-content .board:hover i{
             color: #fff;
         }
+        /* manage title text of the service-content */
         .services .service-content .board .text{
             font-size: 25px;
             font-weight: 500;
             margin: 10px 0 7px 0;
+        }
+        /* keep text within box area */
+        .services .service-content .board .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .services .service-content .board p{
+            height: 120px;  /* this is for adjust text area height and width same for all card/column */
+            width: 350px;
+            object-fit: cover;
         }
         .skills .skills-content .column{
             width: calc(50% - 30px);
@@ -313,10 +352,11 @@
         .skills .skills-content .left .text{
             font-size: 20px;
             font-weight: 600;
-            margin-bottom: 10px;
+            /* margin-bottom: 10px; */
         }
         .skills .skills-content .left p{
             text-align: justify;
+            font-size: 16px;
         }
         .skills .skills-content .left .text span{
             text-decoration: underline wavy rgb(133, 134, 136);
@@ -324,13 +364,13 @@
         .skills .skills-content .right .text{
             font-size: 20px;
             font-weight: 600;
-            margin-bottom: 10px;
+            /* margin-bottom: 10px; */
         }
         .skills .skills-content .right .text span{
             text-decoration: underline wavy rgb(133, 134, 136);
         }
         .skills .skills-content .right .bars{
-            margin-bottom: 15px;
+            margin-bottom: 16px;
         }
         .skills .skills-content .right .info{
             display: flex;
@@ -369,6 +409,9 @@
             width: 100%;
         }
         .skills-content .right .pcrt5::before{
+            width: 100%;
+        }
+        .skills-content .right .pcrt6::before{
             width: 100%;
         }
         .research .carousel .board{
@@ -703,7 +746,8 @@
     <div class="scrollup"><i class="fas fa-angle-up"></i></div>
     <nav class="navbar">
         <div class="pagesize">
-            <div class="logo"><a href="#">GeospatialWith<span>Debu</span></a></div>
+            <!-- <div class="logo"><a href="#"><p style="font-family:'Brush Script MT',cursive">d<span>ghorai</span></p></a></div> -->
+            <div class="logo"><a href="#"><p style="font-family:Copperplate, Papyrus, fantasy">d<span>ghorai</span></p></a></div>
             <ul class="menu">
                 <li><a href="#home" class="topnav">Home</a></li>
                 <li><a href="#about" class="topnav">About</a></li>
@@ -738,12 +782,10 @@
         <div class="pagesize">
             <h2 class="title"><i class='fas fa-user-tie' style='font-size:40px;color:rgb(243, 126, 58)'></i> About Me</h2>
             <div class="about-content">
-                <div class="column left">
+                <div class="column left style-elm">  <!-- column, left, and style-elm are seperate class variable -->
                     <img src="static/pic.png" alt="">
                     <p>&nbsp</p>  <!-- adding blank text -->
                     <div class="icon-center2">
-                        <!-- <p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp  adding whitespace for moving icons in the center of the pic -->
-                        <!-- </p> -->
                         <a href="https://orcid.org/0000-0001-5370-8203">
                             <img src="static/orcid.png" alt="orcid" style="width:25px;height:25px;" hspace="5">
                         </a>
@@ -759,12 +801,11 @@
                     </div>
                 </div>
                 <div class="column right">
-                    <div class="text">I'm Debabrata and I'm a <span class="typing"></span></div>
-                    <p>✔️ <span>I discovered my passion for data science working as an engineer</span> in remote sensing for several years. I believe in self-learning and decided to switch my job towards data science and since then I dedicated my time to learning and understanding data science concepts and their practical application. I took a couple of online courses to get the inside about this field and then attained professional certification course on data science.</p>
-                    <p>✔️ <span>At the beginning everything was new to me except some programming languages:</span> Python, R, and C/C++. I learned intermediate to advanced level Python programming and its various machine learning libraries: OpenCV for object recognition, Scikit-learn for end-to-end machine learning pipeline building, Keras-Tensorflow framework for Deep learning, Flask for web application, and many others. During the learning phase I worked on my portfolio project where I familiar with HTML and CSS web development tools.</p>
-                    <p>✔️ <span>My areas of interests include Computer Vision, Machine Learning, Geospatial</span> Research, and Software Development. In my free time, I like to watch movies, research article writing, and traveling to new place.</p>
-                    <p>🙂 🙂 🙂 🙂 🙂</p>
-                    <a target="_blank" href="https://drive.google.com/file/d/1Sel_4fKLcRrSr1bKQHwFp6HuNHQ_k-rc/view?usp=share_link">View My Resume</a>
+                    <p>I'm a <span class="typing"></span></p>
+                    <p>and scientific programmer who strives to solve complex problems in an elegant manner. I acquired my enthusiasm for data science while working as a remote sensing engineer for several years. I grew up in <span>India</span>, earned my <span>PhD</span> in Remote Sensing and GIS from <span>Vidyasagar University</span>, and now live in <span>Kolkata</span>, where I work for a private sector company developing deep tech solutions and products in agriculture sector. In my spare time, I enjoy watching movies, exploring nature, visiting new places, listening to music, and developing <span>open source software</span>. 🙂 🙂 🙂 🙂 🙂</p>
+                    <div style="display: flex; justify-content: center">
+                        <a target="_blank" href="https://drive.google.com/file/d/1Sel_4fKLcRrSr1bKQHwFp6HuNHQ_k-rc/view?usp=share_link">View My Resume</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -779,8 +820,8 @@
                 <div class="board">
                     <div class="box">
                         <i class="fas fa-thumbtack" style="color: #e2e482;"></i>
-                        <div class="text">Geospatial Analytics</div>
-                        <p>Proficient in creating thematic maps from geospatial data and have ability to make decision from geospatial data.</p>
+                        <div class="text">Geospatial Engineering</div>
+                        <p>Proficient in the acquisition, analysis, and management of geospatial data, as well as experience in cartography, remote sensing, and GIS, allowing you to provide valuable insights and solutions for a variety of applications.</p>
                     </div>
                 </div>
                 <div class="board">
@@ -794,7 +835,7 @@
                     <div class="box">
                         <i class="fas fa-chart-line" style="color: #e2e482;"></i>
                         <div class="text">Data Analytics</div>
-                        <p>Expertise in extraction of insights from data using exploratory data analysis (EDA) techniques with data visualization.</p>
+                        <p>Expertise in extraction of valuable insights from data using a systematic approach consisting of data collection, cleaning, transformation, modeling, and visualization.</p>
                     </div>
                 </div>
             </div>
@@ -808,24 +849,26 @@
         <div class="pagesize">
             <h2 class="title">🦸🏻 My Expertise</h2>
             <div class="skills-content">
-                <div>
+                <!-- <div>
                     <p>✍️ Subject matter experts and a data scientist with hands-on experience in satellite image processing, machine learning model development, backend development, and geospatial data analysis.</p>
                     <p>✍️ Proficient in predictive modeling, data engineering, and data mining algorithms, as well as coding languages.</p>
                     <p>✍️ Experienced in implementing action-oriented solutions to complex business problems on crop analytics, flood hazard mapping, coastal vulnerability analysis, and land use/land cover mapping.</p>
-                </div>
+                </div> -->
                 <div class="column left">
-                    <p>&nbsp</p>
+                    <!-- <p>&nbsp</p> -->
                     <div class="text"><span>Technical Stack</span></div>
-                    <p>☑️Python, R, SQL, NoSQL, HTML, and C/C++</p>
-                    <p>☑️Pandas, Geopandas, Scikit-learn, OpenCV, Keras, Tensorflow, GDAL, Flask, NumPy, SciPy, Matplotlib, Seaborn, NLTK, Tkinter, shapely, tsfresh, earthengine-api, Py6S, and json</p>
-                    <p>☑️AWS Lambda, S3 Bucket, EC2 Instance, and Amazon DynamoDB</p>
-                    <p>☑️Spyder, PyCharm, VSCode, Jupyter Notebook, Google Colab, Git, DBeaver, QGIS, ArcGIS, ERDAS Imagine, PostgreSQL, SQLite, Bootstrap, CSS, JavaScript, MongoDB, PowerBI, Tableau, and ENVI</p>
-                    <p>☑️Operating System: Windows, Ubuntu (Linux)</p>
-                    <!-- <p>☑️Model Deployment: AWS, Heroku, GCS, MLflow, and PythonAnywhere</p> -->
+                    <p>&nbsp</p>
+                    <p>☑️Python, SQL, NoSQL, HTML, CSS, R, and Batch Script</p>
+                    <p>☑️Pandas, Scikit-learn, OpenCV, Keras, Tensorflow, PyTorch, Geopandas, GDAL, shapely, Matplotlib, Seaborn, earthengine-api, Py6S, tsfresh, and Flask</p>
+                    <p>☑️Amazon SageMaker AI, AWS Lambda, Amazon S3, Amazon EC2 Instance, Amazon RDS, and Amazon DynamoDB</p>
+                    <p>☑️Spyder, PyCharm, VSCode, Jupyter Notebook, Google Colab, GitHub, and DBeaver</p>
+                    <p>☑️PostgreSQL, SQLite, QGIS, ArcGIS, ERDAS Imagine, ENVI, PowerBI, and MongoDB</p>
+                    <p>☑️Operating System: Windows and Ubuntu (Linux)</p>
                 </div>
                 <div class="column right">
-                    <p>&nbsp</p>
+                    <!-- <p>&nbsp</p> -->
                     <div class="text"><span>Data Science Skills</span></div>
+                    <p>&nbsp</p>
                     <div class="bars">
                         <div class="info">
                             <span>Supervised/Unsupervised Machine Learning</span>
@@ -850,17 +893,24 @@
                     </div>
                     <div class="bars">
                         <div class="info">
-                            <span>Object Detection, Segmentation, Tracking, Counting and Classification</span>
+                            <span>Object Detection, Classification, Segmentation, Tracking, and Counting</span>
                             <span></span>
                         </div>
                         <div class="line pcrt4"></div>
                     </div>
                     <div class="bars">
                         <div class="info">
-                            <span>Statistics, EDA, Data Cleaning, and Data Visualization</span>
+                            <span>Pre-training, Fine-tuning, and Transfer Learning</span>
                             <span></span>
                         </div>
                         <div class="line pcrt5"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>EDA, Data Cleaning, Statistics, and Data Visualization</span>
+                            <span></span>
+                        </div>
+                        <div class="line pcrt6"></div>
                     </div>
                 </div>
             </div>
@@ -1036,7 +1086,12 @@
                 <div class="column">
                     <div class="text">My geo-location</div>
                     <iframe width="300" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=87.71141052246094%2C22.3234006026561%2C88.85810852050781%2C22.87744046489714&amp;layer=mapnik" style="border: 1px solid black"></iframe>
-                    <br/><small><a href="https://www.openstreetmap.org/#map=11/22.6007/88.2848">View Larger Map</a></small>
+                    <br/>
+                    <small>
+                        <a href="https://www.openstreetmap.org/#map=11/22.6007/88.2848" style="display: flex; justify-content: center">
+                            View Larger Map
+                        </a>
+                    </small>
                 </div>
                 <div class="column">
                     <div class="text">E-mail me if you require assistance in developing AI/ML models or geospatial/data analytics.</div>
@@ -1055,7 +1110,7 @@
                         <div class="textarea">
                             <textarea cols="30" rows="10" placeholder="Type Message..." required></textarea>
                         </div>
-                        <div class="placebutton">
+                        <div class="placebutton" style="display: flex; justify-content: center">
                             <input type="submit" value="Send Message">
                             <p>&nbsp</p><input type="reset" value="Reset">
                         </div>
@@ -1068,7 +1123,7 @@
     <!-- footer section of the page -->
     <!-- ---------------------------------------- -->
     <footer>
-        <span>Created By <a href="#home">GeospatialWithDebu</a> | <span class="far fa-copyright"></span> 2023 My Portfolio Website.</span>
+        <span>Created By <a href="#home">dghorai</a> | <span class="far fa-copyright"></span> 2023 My Portfolio Website.</span>
     </footer>
 
     <!-- jquery for event handling, animation, etc. -->
